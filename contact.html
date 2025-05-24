@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Mvala's Car Market</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="Logo" />
+      <h1>Mvala's Car Market</h1>
+    </div>
+    <div id="menuBtn" class="menu-toggle">&#9776;</div>
+    <div id="navbarLinks" class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="service.html">Services</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html" class="active">Contact Us</a>
+      <a href="FAQ.html">FAQ</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form onsubmit="submitForm(event)">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <input type="text" id="subject" placeholder="Subject" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <footer>
+    <div class="footer-section">
+      <h4>📍 Location</h4>
+      <ul>
+        <li><a href="https://maps.google.com?q=Mvala's+Car+Market" target="_blank">View on Google Maps</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>🕒 Working Hours</h4>
+      <ul>
+        <li>Mon - Fri: 8:00 AM - 6:00 PM</li>
+        <li>Sat: 08:00 AM - 1:00 PM</li>
+        <li>Sun: Closed</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>📞 Contact</h4>
+      <ul>
+        <li>Phone: +123 456 789</li>
+        <li>Email: info@mvalacars.com</li>
+      </ul>
+      <div class="social-links">
+        <a href="https://facebook.com/mvalacars" target="_blank">🌐 Facebook</a>
+        <a href="https://twitter.com/mvalacars" target="_blank">🐦 Twitter</a>
+        <a href="https://instagram.com/mvalacars" target="_blank">📸 Instagram</a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>🔒 Legal</h4>
+      <ul>
+        <li><a href="terms.html">Terms and Conditions</a></li>
+      </ul>
+      <div style="margin-top: 0.5rem;">© 2025 Mvala's Car Market</div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navbarLinks = document.getElementById('navbarLinks');
+
+    menuBtn.addEventListener('click', () => {
+      navbarLinks.classList.toggle('show');
+    });
+
+    function submitForm(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+        if (!name || !email || !subject || !message) {
+            alert('Please fill in all fields.');
+            return;
+        }
+
+
+      setTimeout(() => {
+        window.location.href = "thankyou.html";
+      }, 1000);
+    }
+  </script>
+
+</body>
+</html>

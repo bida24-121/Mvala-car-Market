@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQs - Mvala's Car Market</title>
+   <link rel="stylesheet" href="faq.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="Logo" />
+      <h1>Mvala's Car Market</h1>
+    </div>
+    <div id="menuBtn" class="menu-toggle">&#9776;</div>
+    <div id="navbarLinks" class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="service.html">Services</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="FAQ.html">FAQs</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h3>1. What types of vehicles do you sell? <span class="toggle-icon">&#9656;</span></h3>
+      <p>We sell a wide range of vehicles including new cars, used cars, SUVs, and trucks from trusted brands to suit various needs and budgets.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>2. Can I trade in my old car? <span class="toggle-icon">&#9656;</span></h3>
+      <p>Yes! We offer trade-in options. Bring your current vehicle for evaluation and we’ll offer you a fair market value towards your next purchase.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>3. Do you offer car financing? <span class="toggle-icon">&#9656;</span></h3>
+      <p>Absolutely. We partner with multiple financial institutions to provide competitive financing options to make car ownership easy and affordable.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>4. Are your vehicles inspected? <span class="toggle-icon">&#9656;</span></h3>
+      <p>Yes. Every vehicle on our lot goes through a detailed inspection and quality check to ensure it meets our standards for safety and performance.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>5. Do you offer warranties? <span class="toggle-icon">&#9656;</span></h3>
+      <p>Many of our vehicles come with warranties. Extended warranty options are also available for added peace of mind.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>6. Can I book a test drive? <span class="toggle-icon">&#9656;</span></h3>
+      <p>Of course! Simply contact us or visit our location to schedule a test drive at your convenience.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>7. What documents do I need to purchase a car? <span class="toggle-icon">&#9656;</span></h3>
+      <p>You’ll typically need a valid ID, proof of address, and proof of income. If financing, additional documentation may be required.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>8. Do you deliver vehicles? <span class="toggle-icon">&#9656;</span></h3>
+      <p>We offer delivery services for selected locations. Contact us to find out if we can deliver to your area.</p>
+    </div>
+
+    <div class="contact-box">
+      <h4>Didn't find your question?</h4>
+      <p>We’re happy to help. Reach out to our team anytime.</p>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navbarLinks = document.getElementById('navbarLinks');
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    menuBtn.addEventListener('click', () => {
+      navbarLinks.classList.toggle('show');
+    });
+
+    faqItems.forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
