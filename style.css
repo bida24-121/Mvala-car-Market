@@ -29,6 +29,7 @@
       height: 35px;
       width: 35px;
       object-fit: contain;
+     border-radius: 50%;
     }
 
     .logo h1 {
